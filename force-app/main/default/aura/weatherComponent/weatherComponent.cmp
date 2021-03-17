@@ -1,0 +1,14 @@
+<aura:component controller="WeatherCallOut" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="response" type="Map" />
+    <aura:attribute name="WeatherList" type="List" />
+    
+	<div class="slds-m-around--medium">
+        <lightning:button label="Check Weather" onclick="{!c.getWeather}" />
+		<ul class="slds-list--dotted">
+        	<aura:iteration items="{!v.WeatherList}" var="wList">
+            	<li>{!wList}</li>
+            </aura:iteration>
+        </ul>
+    
+    </div>
+</aura:component>
